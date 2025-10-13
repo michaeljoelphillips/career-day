@@ -1,0 +1,89 @@
+#app {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#container {
+    margin: 24px;
+    padding: 8px;
+}
+
+#cards {
+    display: grid;
+    justify-content: center;
+    gap: 24px;
+
+    grid-template-columns: auto auto auto auto;
+}
+
+.card {
+    display: flex;
+
+    min-width: 300px;
+    aspect-ratio: 1;
+    perspective: 1000px;
+
+    &.flipped .content {
+        transform: rotateY(180deg);
+    }
+
+    .content {
+        flex: 1;
+
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+
+        box-shadow: 0px 6px 6px 0px rgb(0, 0, 0, 0.2);
+
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            border: 1px solid black;
+            border-radius: 6px;
+
+            backface-visibility: hidden;
+
+            background-color: #335d46;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 40%;
+        }
+
+        .front {
+            background-image: url('images/card-front.png');
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+    }
+
+    &.frog .back {
+        background-image: url('images/frog.png');
+    }
+
+    &.lion .back {
+        background-image: url('images/lion.png');
+    }
+
+    &.cat .back {
+        background-image: url('images/cat.png');
+    }
+
+    &.mouse .back {
+        background-image: url('images/mouse.png');
+    }
+
+    &.hippo .back {
+        background-image: url('images/hippo.png');
+    }
+
+    &.dog .back {
+        background-image: url('images/dog.png');
+    }
+}
