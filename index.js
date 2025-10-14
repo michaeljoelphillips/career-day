@@ -57,7 +57,7 @@ const checkMatch = (element) => {
 const reset = async () => {
   flip(...cards());
 
-  setTimeout(shuffle, 200);
+  setTimeout(shuffle, 1000);
 };
 
 const checkWin = () => {
