@@ -1,28 +1,51 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+h1 {
+    font-weight: 700;
+}
+
 #app {
     min-height: 100vh;
+    min-width: 100vw;
 
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    justify-content: center;
 }
 
 #container {
-    margin: 24px;
-    padding: 8px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+    width: 100%;
+}
+
+#header {
+    text-align: center;
+    padding: 24px;
 }
 
 #cards {
     display: grid;
-    justify-content: center;
-    gap: 24px;
 
-    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+
+    grid-gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
     display: flex;
 
-    min-width: 300px;
+    cursor: pointer;
+
     aspect-ratio: 1;
     perspective: 1000px;
 
@@ -85,5 +108,15 @@
 
     &.dog .back {
         background-image: url('images/dog.png');
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #container {
+        max-width: 1200px;
+    }
+
+    #cards {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
