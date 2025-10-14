@@ -37,7 +37,7 @@ h1 {
 
     justify-content: center;
 
-    grid-gap: 24px;
+    grid-gap: 8px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -111,12 +111,19 @@ h1 {
     }
 }
 
+@media screen and (min-width: 768px) {
+    #cards {
+        grid-gap: 16px;
+    }
+}
+
 @media screen and (min-width: 992px) {
     #container {
         max-width: 1200px;
     }
 
     #cards {
+        grid-gap: 24px;
         grid-template-columns: repeat(4, 1fr);
     }
 }
