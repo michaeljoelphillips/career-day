@@ -43,7 +43,7 @@ const checkMatch = (element) => {
 
   if (typeA !== typeB) {
     setTimeout(() => {
-      new Audio('./sounds/error.mp3').play();
+      new Audio('../sounds/error.mp3').play();
 
       flip(element, _selected);
     }, 800);
@@ -51,7 +51,7 @@ const checkMatch = (element) => {
     return;
   }
 
-  new Audio('./sounds/success.mp3').play();
+  new Audio('../sounds/success.mp3').play();
 };
 
 const reset = async () => {
@@ -62,7 +62,7 @@ const reset = async () => {
 
 const checkWin = () => {
   if (cards('flipped').length == CARD_PAIRS * 2) {
-    new Audio('./sounds/yay.mp3').play();
+    new Audio('../sounds/yay.mp3').play();
 
     confetti.addConfetti();
 
